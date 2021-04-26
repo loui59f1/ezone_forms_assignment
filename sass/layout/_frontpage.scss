@@ -1,0 +1,201 @@
+/* basic styling input felt */
+input:is([type="text"], [type="password"], [type="email"]) {
+    color: #212121;
+    border: 1px solid #212121;
+    background: #e5fdff;
+    padding-block: 8px 10px;
+    padding-inline: 12px;
+    border-radius: 4px;
+    outline: none;
+    caret-color: pink;
+    resize: none;
+    transition: 0.1s background;
+  }
+  
+  /* styling error */
+  .error {
+    opacity: 0;
+    visibility:hidden;
+  }
+  
+  input:invalid:not(:placeholder-shown, :focus) {
+    border-color:red;
+    animation: shake .125s 2 backwards;
+  }
+  
+  input:not(:focus, :placeholder-shown):invalid ~ .error {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* styling valid */
+  input:valid:not(:placeholder-shown, :focus) {
+    border-color: green;
+  }
+  
+  @keyframes shake {
+    25% {
+      transform: translateX(-6px);
+    }
+    75% {
+      transform: translateX(6px);
+    }
+  }
+  
+    /* Basic layout for input */
+  .form-group {
+    display: grid;
+    gap: 3px;
+    grid-row: span 3;
+  }
+
+/* Louise edited */
+.form-group label {
+    /* display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding-block: 0.5rem;
+    padding-inline: 0.4rem 0.7rem;
+    margin-inline-start: -0.4rem;
+    border-radius: 10px; */
+    color: #2E326B;
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+    margin-bottom: -60px;
+    margin-left: 12px;
+    padding: 2px 4px;
+    height: 20px;
+    width: auto !important;
+    background-color: #fff;
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+  }
+
+  input:is([type="text"], [type="password"], [type="email"]) {
+    color: #2E326B;
+    border: 1px solid #CACEFC;
+    background: #fff;
+    padding: 15px 10px;
+    padding-inline: 12px;
+    border-radius: 7px;
+    outline: none;
+    caret-color: pink;
+    resize: none;
+    transition: 0.1s background;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group {
+    display: grid;
+    gap: 3px;
+    grid-row: span 3;
+    position: relative;
+  }
+
+  fieldset {
+      border: none;
+  }
+
+
+  /* Styling focus */
+  input:focus {
+    border-color: #3E14D6;
+  }
+
+  /* Style label focus - virker ikke */
+  label[for]:focus {
+    color: #3E14D6 !important;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: none;
+    margin-top: 20px;
+    background-color: #6259FA;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    cursor: pointer;
+}
+
+input[name="name"] {
+    background-image: url('../../img/name.png');
+    background-repeat: no-repeat;
+    background-position: 94.5% 18px;
+    background-size: 2.8%;
+}
+
+input[name="gamertag"] {
+    background-image: url('../../img/gametag.png');
+    background-repeat: no-repeat;
+    background-position: 95% 13px;
+    background-size: 3.8%;
+}
+
+input[name="password"] {
+    background-image: url('../../img/password.png');
+    background-repeat: no-repeat;
+    background-position: 95% 17px;
+    background-size: 3.5%;
+}
+
+input[name="email"] {
+    background-image: url('../../img/mail.png');
+    background-repeat: no-repeat;
+    background-position: 95% 19px;
+    background-size: 4%;
+  }
+
+fieldset ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Virker ikke */
+.checkbox:before {
+    border-color: #CACEFC;
+}
+
+fieldset li {
+    list-style: none;
+    margin-left: -40px;
+    margin-bottom: 5px;
+    font-family: 'Jost', sans-serif;
+}
+
+.form {
+    padding: 50px 70px;
+}
+
+.form h2 {
+    font-family: 'Jost', sans-serif;
+    margin-left: 15px;
+    color: #2E326B;
+    font-weight: 600;
+}
+
+.form p {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 0.8px;
+    margin-left: 15px;
+    color: #2E326B;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+#modal article .logo {
+    position: relative;
+    text-align: center;
+    margin-top: 35px;
+}
+
+#modal article .logo img {
+    width: 96px;
+    height: 18px;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="" href="">
+    <title>Ezone</title>
+</head>
+
+<body>
+    <section id="modal" class="step_1">
+        <article>
+            <div class="column img">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+            </div>
+            <div class="column form">
+                <div id="close_modal">x</div>
+                <h2>Games</h2>
+                <p>What games do you play?</p>
+                <fieldset class="games">
+                    <ul id="step_1_controls"></ul>
+                </fieldset>
+                <button class="btn_step_1">Step 2</button>
+            </div>
+        </article>
+    </section>
+    <section id="modal" class="step_2">
+        <article>
+            <div class="column img">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+            </div>
+            <div class="column form">
+                <div id="close_modal">x</div>
+                <h2>Types of gameplay</h2>
+                <p>What type of games are you interested in?</p>
+                <fieldset class="types">
+                    <ul id="step_2_controls"></ul>
+                </fieldset>
+                <button class="btn_step_2">Step 3</button>
+            </div>
+        </article>
+    </section>
+    <section id="modal" class="step_3">
+        <article>
+            <div class="column img">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+            </div>
+            <div class="column form">
+                <div id="close_modal">x</div>
+                <h2>Areas</h2>
+                <p>Which areas do you wanna work on?</p>
+                <fieldset class="areas">
+                    <ul id="step_3_controls"></ul>
+                </fieldset>
+                <button class="btn_step_3">Step 4</button>
+            </div>
+        </article>
+    </section>
+    <section id="modal" class="step_4">
+        <article>
+            <div class="column img">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+            </div>
+            <div class="column form">
+                <div id="close_modal">x</div>
+                <h2>Create account</h2>
+                <p>Text below heading</p>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <span class="error">Please enter your full name</span>
+                        <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gamertag">Gamertag</label>
+                        <span class="error">Please enter your gamertag</span>
+                        <input type="text" name="gamertag" id="gamertag" placeholder="Enter your gametag" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <span class="error">The password must include..</span>
+                        <input type="password" name="password" id="password"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}" placeholder="Enter your password" required>
+                    </div>
+                    <!--Must contain at least one number, one uppercase and lowercase letter and min. 4 characters-->
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <span class="error">Your e-mail address is invalid. Please include (at)</span>
+                        <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
+                    </div>
+                    <input type="submit" value="Create account">
+                </fieldset>
+            </div>
+        </article>
+    </section>
+
+    <template id="checkbox_games">
+        <li>
+            <input class="checkbox" id="" type="checkbox" name="game" value="" required />
+            <label for=""></label>
+        </li>
+    </template>
+
+    <template id="checkbox_types">
+        <li>
+            <input class="checkbox" id="" type="checkbox" name="type" value="" required />
+            <label for=""></label>
+        </li>
+    </template>
+
+    <template id="checkbox_areas">
+        <li>
+            <input class="checkbox" id="" type="checkbox" name="area" value="" required />
+            <label for=""></label>
+        </li>
+    </template>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
