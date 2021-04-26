@@ -19,7 +19,7 @@ input:is([type="text"], [type="password"], [type="email"]) {
   }
   
   input:invalid:not(:placeholder-shown, :focus) {
-    border-color:red;
+    border-color:#F48D69;
     animation: shake .125s 2 backwards;
   }
   
@@ -30,7 +30,7 @@ input:is([type="text"], [type="password"], [type="email"]) {
   
   /* styling valid */
   input:valid:not(:placeholder-shown, :focus) {
-    border-color: green;
+    border-color: #5BE080;
   }
   
   @keyframes shake {
@@ -80,6 +80,7 @@ input:is([type="text"], [type="password"], [type="email"]) {
     background: #fff;
     padding: 15px 10px;
     padding-inline: 12px;
+    padding-left: 15px;
     border-radius: 7px;
     outline: none;
     caret-color: pink;
@@ -113,9 +114,12 @@ input:is([type="text"], [type="password"], [type="email"]) {
 
 input[type="submit"] {
     width: 100%;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 7px;
     border: none;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     margin-top: 20px;
     background-color: #6259FA;
     color: #fff;
@@ -186,7 +190,8 @@ fieldset li {
     margin-left: 15px;
     color: #2E326B;
     margin-bottom: 15px;
-    font-weight: 400;
+    margin-top: 10px;
+    font-weight: 300;
 }
 
 #modal article .logo {
