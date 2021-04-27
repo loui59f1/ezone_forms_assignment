@@ -18,7 +18,11 @@ input:is([type="text"], [type="password"], [type="email"]) {
     visibility:hidden;
   }
   
-  input:invalid:not(:placeholder-shown, :focus) {
+  input:is([type="text"], [type="password"], [type="email"]):invalid:not(:placeholder-shown, :focus) {
+    background-image: url('../../img/invalid.png');
+    background-repeat: no-repeat;
+    background-position: 95% 19px;
+    background-size: 3.5%;
     border-color:#F48D69;
     animation: shake .125s 2 backwards;
   }
@@ -29,8 +33,11 @@ input:is([type="text"], [type="password"], [type="email"]) {
   }
   
   /* styling valid */
-  input:valid:not(:placeholder-shown, :focus) {
+  input:is([type="text"], [type="password"], [type="email"]):valid:not(:placeholder-shown, :focus) {
     border-color: #5BE080;
+    label {
+      color: #5BE080;;
+    }
   }
   
   @keyframes shake {
@@ -134,11 +141,25 @@ input[name="name"] {
     background-size: 2.8%;
 }
 
+input[name="name"]:valid:not(:placeholder-shown, :focus) {
+  background-image: url('../../img/valid.png');
+  background-repeat: no-repeat;
+  background-position: 95% 19px;
+  background-size: 4%;
+}
+
 input[name="gamertag"] {
     background-image: url('../../img/gametag.png');
     background-repeat: no-repeat;
     background-position: 95% 13px;
     background-size: 3.8%;
+}
+
+input[name="gamertag"]:valid:not(:placeholder-shown, :focus) {
+  background-image: url('../../img/valid.png');
+  background-repeat: no-repeat;
+  background-position: 95% 19px;
+  background-size: 4%;
 }
 
 input[name="password"] {
@@ -148,12 +169,26 @@ input[name="password"] {
     background-size: 3.5%;
 }
 
+input[name="password"]:valid:not(:placeholder-shown, :focus) {
+  background-image: url('../../img/valid.png');
+  background-repeat: no-repeat;
+  background-position: 95% 19px;
+  background-size: 4%;
+}
+
 input[name="email"] {
     background-image: url('../../img/mail.png');
     background-repeat: no-repeat;
     background-position: 95% 19px;
     background-size: 4%;
-  }
+}
+
+input[name="email"]:valid:not(:placeholder-shown, :focus) {
+  background-image: url('../../img/valid.png');
+  background-repeat: no-repeat;
+  background-position: 95% 19px;
+  background-size: 4%;
+}
 
 fieldset ul {
     display: grid;
@@ -161,46 +196,355 @@ fieldset ul {
 }
 
 /* Virker ikke */
-.checkbox:before {
-    border-color: #CACEFC;
+// .checkbox {
+//     outline: 1px solid #CACEFC;
+// }
+
+/* Forsøg på at style checkbox - virker ok.. */
+
+// .checkbox {
+//   position: relative;
+//   -webkit-appearance:none;
+//   width: 16px;
+//   height: 16px;
+//   display: inline-block;
+//   background: #FFFFFF;
+// 	border: 1px solid #CACEFC;
+//   border-radius: 3px;
+//   margin-right: 7px;
+// }
+
+// .checkbox:after {
+//   content: "";
+//   display: inline-block;
+//   position: relative;
+//   top: -3px;
+//   left: 4px;
+//   width: 3px;
+//   height: 5px;
+//   border-bottom: 1px solid #fff;
+//   border-right: 1px solid #fff;
+//   -webkit-transform: rotate(45deg);
+// }
+
+// input[type=checkbox]:checked   {
+//   background: #327DFF;
+//   outline: none;
+//   border: 1px solid rgba(50,125,255,1);
+//   font-size: 12px;
+// }
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.step_2 input[type="checkbox"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 4px;
+  border-color: #9EA5F3;
+  margin-right: 10px;
+}
+
+.step_2 input[type="checkbox"] + label {
+  color: #36327B;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.step_2 input[type="checkbox"]:checked + *::before {
+  color: #3E14D6;
+  text-align: center;
+  border-color: #3E14D6;
+}
+
+.step_2 input[type="checkbox"]:checked + * {
+  background: url('../../img/check.png') no-repeat;
+  background-position: 4px 1px;
+  background-size: 15px;
+}
+
+.step_3 input[type="checkbox"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 4px;
+  border-color: #9EA5F3;
+  margin-right: 10px;
+}
+
+.step_3 input[type="checkbox"] + label {
+  color: #36327B;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.step_3 input[type="checkbox"]:checked + *::before {
+  color: #3E14D6;
+  text-align: center;
+  border-color: #3E14D6;
+}
+
+.step_3 input[type="checkbox"]:checked + * {
+  background: url('../../img/check.png') no-repeat;
+  background-position: 4px 1px;
+  background-size: 15px;
 }
 
 fieldset li {
     list-style: none;
     margin-left: -40px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-family: 'Jost', sans-serif;
 }
 
 .form {
-    padding: 50px 70px;
+    padding: 50px 50px;
+    background: #fff;
+    position: relative;
+    z-index: 500;
+    border-radius: 0 17px 17px 0;
+}
+
+fieldset {
+  padding: 0 !important;
 }
 
 .form h2 {
     font-family: 'Jost', sans-serif;
-    margin-left: 15px;
     color: #2E326B;
     font-weight: 600;
 }
 
 .form p {
     font-family: 'Jost', sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
     letter-spacing: 0.8px;
-    margin-left: 15px;
     color: #2E326B;
     margin-bottom: 15px;
     margin-top: 10px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 #modal article .logo {
     position: relative;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 #modal article .logo img {
     width: 96px;
     height: 18px;
 }
+
+.pills {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  z-index: 200;
+  margin-left: 250px;
+}
+
+.btn_step_1,
+.btn_step_2,
+.btn_step_3 {
+  width: 40%;
+  padding: 12px 15px;
+  border-radius: 7px;
+  border: none;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0px;
+  right: 45px;
+  bottom: 40px;
+  background-color: #6259FA;
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+  cursor: pointer;
+  position: absolute;
+}
+
+/* Step 0 */
+
+.step_1 .form {
+  padding: 50px;
+  padding-right: 5px;
+  grid-gap: 5em;
+
+  h2 {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.step_2 .form {
+  padding: 50px;
+  padding-right: 5px;
+  grid-gap: 5em;
+
+  li {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.step_3 .form {
+  padding: 50px;
+  padding-right: 5px;
+  grid-gap: 5em;
+
+  li {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.step_4 .form {
+
+  input {
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+
+  fieldset p {
+    margin-bottom: 20px;
+    margin-left: 5px;
+    font-size: 0.85em;
+  }
+}
+
+.step_1 fieldset ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.step_1 .disable-scrollbars {
+scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;  /* IE 10+ */
+&::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Chrome/Safari/Webkit */
+}
+}
+
+#step_1_controls {
+max-height: 390px;
+overflow-y: scroll;
+position: relative;
+}
+
+.step_1 fieldset {
+  margin: 0;
+  padding: 0;
+} 
+
+.step_1 li {
+  width: 100%;
+  height: 6rem;
+  position: relative;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  border-radius: 17px 17px 17px 17px;
+}
+
+// Det man klikker på for at checke boxen af
+.step_1 input[type="checkbox"] + *::before {
+  content: "";
+  text-align: left;
+  background-color: fff;
+  width: 11rem;
+  height: 6rem;
+  position: absolute;
+  cursor: pointer;
+  background: url('../../img/card_check_before.png') no-repeat;
+  background-position: 9em 0;
+  background-size: 25px;
+}
+
+.step_1 label {
+  position: absolute;
+  top: 60px;
+}
+
+.step_1 input[type="checkbox"] + label {
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  margin-left: 13px;
+}
+
+// Det man klikker på når den er checked
+.step_1 input[type="checkbox"]:checked + *::before {
+  text-align: left;
+  background-color: fff;
+  width: 11rem;
+  height: 2rem;
+  position: absolute;
+  cursor: pointer;
+  background: url('../../img/card_check.png') no-repeat;
+  background-position: 9em 0;
+  background-size: 25px;
+}
+
+.step_1 input[type="checkbox"]:checked + label {
+  position: absolute;
+}
+
+// .step_0 input[type="checkbox"]:checked + *::after {
+//   background: url('../../img/card_check.png') no-repeat;
+//   background-position: top;
+//   background-size: 15px;
+//   width: 2rem;
+//   height: 2rem;
+//   position: absolute;
+//   border-radius: 50%;
+//   margin-left: 50px;
+// }

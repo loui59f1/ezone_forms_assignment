@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Uniform Pro Condensed';
+    src: url('../../fonts/Uniform-Condensed4.woff') format('woff'),
+        url('../../fonts/Uniform-Condensed4.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Shapiro';
+    src: url('../../fonts/Shapiro-35FeatherText.woff') format('woff'),
+        url('../../fonts/Shapiro-35FeatherText.woff2') format('woff2');
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'Uniform Pro Condensed';
+}
+
+h3 {
+    font-family: 'Shapiro';
+}
+
+#modal article {
+    .img {
+
+        h2 {
+            color: #B9F8B9;
+            font-size: 2.2em;
+            text-align: left;
+            margin: 10px 0;
+            width: 80%;
+            text-transform: uppercase;
+            line-height: 50px;
+        }
+
+        h3 {
+            font-family: 'Jost', sans-serif;
+            color: #f5f5f5;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        .tag {
+            float: right;
+            margin-top: -100px;
+        }
+
+        .form_text {
+            margin-top: 420px;
+            margin-left: 45px;
+        }
+    }
+}
