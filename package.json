@@ -1,0 +1,26 @@
+{
+  "name": "ezone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loui59f1/ezone_forms_assignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loui59f1/ezone_forms_assignment/issues"
+  },
+  "homepage": "https://github.com/loui59f1/ezone_forms_assignment#readme",
+  "devDependencies": {
+    "sass": "^1.32.11",
+    "vite": "^2.2.3"
+  }
+}
