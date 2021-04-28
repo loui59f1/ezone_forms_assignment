@@ -21,6 +21,7 @@ function getJSON() {
 }
 
 function showModal() {
+    document.querySelector("#modal.step_4").style.display = "none";
     document.querySelector("#modal.step_1").style.display = "block";
     document.querySelector("#step_bar_1").classList.add("load_step_1");
     document.querySelector(".step_1 .pills").classList.add("fade_pills");
@@ -150,7 +151,6 @@ function checkEmailValid() {
 
 function checkPasswordValid() {
     if (document.querySelector("#password").checkValidity()) {
-        console.log("Yes password is valid");
         post();
     } else {
         document.querySelector("#password").classList.add("invalid");
@@ -158,4 +158,3 @@ function checkPasswordValid() {
         setTimeout(function () { document.querySelector(".password_error").style.visibility = "hidden"; }, 3000);
     }
 }
-
