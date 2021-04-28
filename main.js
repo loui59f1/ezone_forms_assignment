@@ -101,23 +101,6 @@ function gameBoxes(game) {
 }
 
 //STEP 2
-// function typeCheckBoxes(type) {
-//     let typeName = minifyText(type);
-
-//     const clone = document
-//         .querySelector("template#checkbox_types")
-//         .content.cloneNode(true);
-
-//     clone.querySelector("label").textContent = type;
-//     clone.querySelector("label").setAttribute("for", typeName);
-
-//     clone.querySelector("input").setAttribute("id", typeName);
-//     clone.querySelector("input").setAttribute("value", typeName);
-
-//     document.querySelector("#step_2_controls").appendChild(clone);
-// }
-
-//STEP 2
 function areasCheckBoxes(area) {
     let areaName = minifyText(area);
 
@@ -143,11 +126,11 @@ function checkNameValid() {
     // check først name - hvis ikke valid, vis meddelse
     if (document.querySelector("#name").checkValidity()) {
         console.log("Yes name is valid");
-        document.querySelector(".name_error").style.visibility = "hidden";
         checkGamertagValid();
     } else {
         console.log("no name is not valid");
         document.querySelector(".name_error").style.visibility = "visible";
+        setTimeout(function () { document.querySelector(".name_error").style.visibility = "hidden"; }, 3000);
     }
 }
 
@@ -155,11 +138,11 @@ function checkGamertagValid() {
     // check først name - hvis ikke valid, vis meddelse
     if (document.querySelector("#gamertag").checkValidity()) {
         console.log("Yes gamertag is valid");
-        document.querySelector(".gamertag_error").style.visibility = "hidden";
         checkEmailValid();
     } else {
         console.log("no gamertag is not valid");
         document.querySelector(".gamertag_error").style.visibility = "visible";
+        setTimeout(function () { document.querySelector(".gamertag_error").style.visibility = "hidden"; }, 3000);
     }
 }
 
@@ -167,11 +150,11 @@ function checkEmailValid() {
     // check først name - hvis ikke valid, vis meddelse
     if (document.querySelector("#email").checkValidity()) {
         console.log("Yes email is valid");
-        document.querySelector(".email_error").style.visibility = "hidden";
         checkPasswordValid();
     } else {
         console.log("no email is not valid");
         document.querySelector(".email_error").style.visibility = "visible";
+        setTimeout(function () { document.querySelector(".email_error").style.visibility = "hidden"; }, 3000);
     }
 }
 
@@ -179,12 +162,12 @@ function checkPasswordValid() {
     // check først name - hvis ikke valid, vis meddelse
     if (document.querySelector("#password").checkValidity()) {
         console.log("Yes password is valid");
-        document.querySelector(".password_error").style.visibility = "hidden";
         post();
     } else {
         console.log("no password is not valid");
-        document.querySelector(".password_error").style.visibility = "visible";
         document.querySelector("#password").classList.add("invalid");
+        document.querySelector(".password_error").style.visibility = "visible";
+        setTimeout(function () { document.querySelector(".password_error").style.visibility = "hidden"; }, 3000);
     }
 }
 
