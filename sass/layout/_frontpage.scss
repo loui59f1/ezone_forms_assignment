@@ -13,12 +13,32 @@ input:is([type="text"], [type="password"], [type="email"]) {
   }
   
   /* styling error */
-  .error {
-    opacity: 0;
-    visibility:hidden;
+  .name_error {
+    visibility: hidden;
+  }
+
+  .gamertag_error {
+    visibility: hidden;
+  }
+
+  .email_error {
+    visibility: hidden;
+  }
+
+  .password_error {
+    visibility: hidden;
   }
   
   input:is([type="text"], [type="password"], [type="email"]):invalid:not(:placeholder-shown, :focus) {
+    background-image: url('../../img/invalid.png');
+    background-repeat: no-repeat;
+    background-position: 95% 19px;
+    background-size: 3.5%;
+    border-color:#F48D69;
+    animation: shake .125s 2 backwards;
+  }
+
+  .invalid {
     background-image: url('../../img/invalid.png');
     background-repeat: no-repeat;
     background-position: 95% 19px;
@@ -363,7 +383,7 @@ fieldset {
 .btn_step_1 {
   width: 40%;
   padding: 12px 15px;
-  border-radius: 7px;
+  border-radius: 19px;
   border: none;
   font-size: 0.9em;
   letter-spacing: 1px;
@@ -371,8 +391,9 @@ fieldset {
   margin-top: 0px;
   right: 30px;
   bottom: -40px;
-  background-color: #6259FA;
-  color: #fff;
+  background-color: transparent;
+  border: 2px solid #6259FA;
+  color: #6259FA;
   font-family: 'Jost', sans-serif;
   cursor: pointer;
   position: absolute;
@@ -458,6 +479,7 @@ fieldset {
   padding: 30px;
   padding-right: 25px;
   grid-gap: 5em;
+  overflow-x: hidden;
 
   li {
     margin-bottom: 25px;
@@ -479,10 +501,102 @@ fieldset {
   }
 }
 
+.slidein {
+  animation: slidefromright;
+  animation-duration: 0.6s;
+  transition-timing-function: cubic-bezier(.17,.67,.93,.65);
+}
+
+@keyframes slidefromright {
+  from {
+    transform: translateX(200px);
+  } to {
+    transform: translateX(0);
+  }
+}
+
+.fade_pills {
+  animation: fadeslidein;
+  animation-duration: 1.6s;
+  transition-timing-function: cubic-bezier(.17,.67,.93,.65);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeslidein {
+  from {
+    opacity: 0.3;
+    transform: translateY(-20px);
+  } to {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+}
+
+.load_step_1 {
+  animation: load1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes load1 {
+  from {
+    width: 0%;
+  } to {
+    width: 12.5%;
+  }
+}
+
+.load_step_2 {
+  animation: load2;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes load2 {
+  from {
+    width: 12.5%;
+  } to {
+    width: 25%;
+  }
+}
+
+.load_step_3 {
+  animation: load3;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes load3 {
+  from {
+    width: 25%;
+  } to {
+    width: 37.5%;
+  }
+}
+
+.load_step_4 {
+  animation: load4;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes load4 {
+  from {
+    width: 37.5%;
+  } to {
+    width: 50%;
+  }
+}
+
 .step_3 .form {
   padding: 30px;
   padding-right: 20px;
   grid-gap: 5em;
+  overflow-x: hidden;
 
   li {
     margin-bottom: 25px;
@@ -506,6 +620,7 @@ fieldset {
 
 .step_4 .form {
   padding: 30px;
+  overflow-x: hidden;
 
   input {
     margin-bottom: 5px;
@@ -640,3 +755,17 @@ scrollbar-width: none; /* Firefox */
 //   border-radius: 50%;
 //   margin-left: 50px;
 // }
+
+button {
+  transition: all .15s ease-in;
+ }
+ 
+
+@media (hover: hover) {
+  button:hover {
+    background-color: #6259FA;
+    color: #fff;
+    border-color: transparent;
+  }
+ }
+ 

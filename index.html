@@ -10,8 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,500&display=swap"
         rel="stylesheet">
-    <link rel="" href="">
-    <title>Ezone Esports</title>
+    <title>ezone</title>
 </head>
 
 <body>
@@ -28,7 +27,7 @@
                 </div>
                 <div class="form_text">
                     <h3>Start your journey today</h3>
-                    <h2>Join the community of todays gamers</h2>
+                    <h2>Accelerate your game with ezone</h2>
                 </div>
                 <div class="tag">
                     <h3></h3>
@@ -46,7 +45,7 @@
             </div>
         </article>
     </section>
-    <section id="modal" class="step_2">
+    <!-- <section id="modal" class="step_2">
         <article>
             <div class="column img">
                 <div class="pills">
@@ -68,15 +67,17 @@
             </div>
             <div class="column form">
                 <div id="close_modal">x</div>
-                <h2>Types of games</h2>
-                <p>What type of games are you interested in?</p>
-                <fieldset class="types">
-                    <ul id="step_2_controls"></ul>
-                </fieldset>
+                <div class="column_content">
+                    <h2>Types of games</h2>
+                    <p>What type of games are you interested in?</p>
+                    <fieldset class="types">
+                        <ul id="step_2_controls"></ul>
+                    </fieldset>
+                </div>
                 <button class="btn_step_2">Step 3</button>
             </div>
         </article>
-    </section>
+    </section> -->
     <section id="modal" class="step_3">
         <article>
             <div class="column img">
@@ -90,7 +91,7 @@
                 </div>
                 <div class="form_text">
                     <h3>Start your journey today</h3>
-                    <h2>Join the community of todays gamers</h2>
+                    <h2>Improve your key performances</h2>
                 </div>
                 <div class="tag">
                     <h3></h3>
@@ -99,11 +100,13 @@
             </div>
             <div class="column form">
                 <div id="close_modal">x</div>
-                <h2>Improvement areas</h2>
-                <p>In which areas would you like to improve?</p>
-                <fieldset class="areas">
-                    <ul id="step_3_controls"></ul>
-                </fieldset>
+                <div class="column_content">
+                    <h2>Improvement areas</h2>
+                    <p>In which areas would you like to improve?</p>
+                    <fieldset class="areas">
+                        <ul id="step_3_controls"></ul>
+                    </fieldset>
+                </div>
                 <button class="btn_step_3">Step 4</button>
             </div>
         </article>
@@ -130,37 +133,40 @@
             </div>
             <div class="column form">
                 <div id="close_modal">x</div>
-                <h2>Create account</h2>
-                <p>It's free! Please enter your information and fill out your interests on the next two steps.</p>
-                <fieldset>
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <span class="error">Please enter your full name</span>
-                        <input type="text" name="name" id="name" placeholder="Enter your full name" required>
-                    </div>
+                <div class="column_content">
+                    <h2>Create account</h2>
+                    <p>It's free! Please enter your information and fill out your interests on the next two steps.</p>
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <span class="name_error">Please enter your name</span>
+                            <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="gamertag">Gamertag</label>
-                        <span class="error">Please enter your gamertag</span>
-                        <input type="text" name="gamertag" id="gamertag" placeholder="Enter your gametag" required>
-                    </div>
+                        <div class="form-group">
+                            <label for="gamertag">Gamertag</label>
+                            <span class="gamertag_error">Please enter your gamertag</span>
+                            <input type="text" name="gamertag" id="gamertag" placeholder="Enter your gametag" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <span class="error">Your e-mail address is invalid. Please include (at)</span>
-                        <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <span class="error">The password must include..</span>
-                        <input type="password" name="password" id="password"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}" placeholder="Enter your password" required>
-                        <p>Password must contain at least one number, one uppercase and lowercase letter, and min. 4
-                            characters</p>
-                    </div>
-                    <!--Must contain at least one number, one uppercase and lowercase letter and min. 4 characters-->
-                    <input type="submit" value="Create account">
-                </fieldset>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <span class="email_error">Please enter your e-mail</span>
+                            <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <span class="password_error">Please enter a valid password</span>
+                            <input type="password" name="password" id="password"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}" placeholder="Enter your password"
+                                required>
+                            <p>Password must contain at least one number, one uppercase and lowercase letter, and min. 4
+                                characters</p>
+                        </div>
+                        <!--Must contain at least one number, one uppercase and lowercase letter and min. 4 characters-->
+                    </fieldset>
+                </div>
+                <input type="submit" class="submit_btn" value="Create account">
             </div>
         </article>
     </section>
@@ -172,19 +178,12 @@
         </li>
     </template>
 
-    <template id="checkbox_games">
-        <li>
-            <input class="checkbox" id="" type="checkbox" name="game" value="" required />
-            <label for=""></label>
-        </li>
-    </template>
-
-    <template id="checkbox_types">
+    <!-- <template id="checkbox_types">
         <li>
             <input class="checkbox" id="" type="checkbox" name="type" value="" required />
             <label for=""></label>
         </li>
-    </template>
+    </template> -->
 
     <template id="checkbox_areas">
         <li>

@@ -8,6 +8,10 @@
     display: none;
 }
 
+// .content_img {
+//     overflow: hidden;
+// }
+
 #modal article {
     display: block;
     position: fixed;
@@ -20,6 +24,7 @@
     // align-items: center;
     z-index: 500;
     border-radius: 17px;
+    overflow: hidden;
 
     @media only screen and (min-width: 540px) {
         display: grid;
