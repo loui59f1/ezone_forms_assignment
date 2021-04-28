@@ -8,9 +8,20 @@
     display: none;
 }
 
-// .content_img {
-//     overflow: hidden;
-// }
+.content_img {
+    overflow: visible;
+    display: none;
+
+    @media only screen and (min-width: 540px) {
+        display: block;
+        background-image: url('../../img/modal_img2.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-position: top;
+        overflow: visible;
+    }
+}
 
 #modal article {
     display: block;
@@ -23,7 +34,7 @@
     // justify-content: center;
     // align-items: center;
     z-index: 500;
-    border-radius: 17px;
+    border-radius: 0 17px 17px 0;
     overflow: hidden;
 
     @media only screen and (min-width: 540px) {
@@ -40,17 +51,7 @@
     }
 
     .column.img {
-        display: none;
 
-        @media only screen and (min-width: 540px) {
-            display: block;
-            background-image: url('../../img/modal_img2.jpg');
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-            background-position: top;
-            overflow: visible;
-        }
     }
 
     #close_modal {
