@@ -1,3 +1,5 @@
+/* Modal styling */
+
 #modal {
     background-color: rgba(36,38,68,0.9);
     position: fixed;
@@ -8,21 +10,6 @@
     display: none;
 }
 
-.content_img {
-    overflow: hidden;
-    display: none;
-
-    @media only screen and (min-width: 540px) {
-        display: block;
-        background-image: url('../../img/modal_img2.jpg');
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        background-position: top;
-        overflow: hidden;
-    }
-}
-
 #modal article {
     display: block;
     position: fixed;
@@ -31,8 +18,6 @@
     min-height: 90vh;   
     background-color: #fff;
     box-shadow: 0px 0px 34px -4px rgba(0, 0, 0, 0.2);
-    // justify-content: center;
-    // align-items: center;
     z-index: 500;
     border-radius: 0 17px 17px 0;
     overflow: hidden;
@@ -50,8 +35,19 @@
         margin-bottom: -25px;
     }
 
-    .column.img {
-
+    .content_img {
+        overflow: hidden;
+        display: none;
+    
+        @media only screen and (min-width: 540px) {
+            display: block;
+            background-image: url('../../img/modal_img2.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-position: top;
+            overflow: hidden;
+        }
     }
 
     #close_modal {
@@ -77,6 +73,38 @@
         bottom: 0px;
         right: 0px;
     }
+}
+
+
+.form h2 {
+    font-family: 'Jost', sans-serif;
+    color: #2E326B;
+    font-weight: 600;
+}
+
+.form p {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9em;
+    letter-spacing: 0.8px;
+    color: #2E326B;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+#modal article .logo {
+    position: relative;
+    text-align: center;
+    padding-top: 40px;
+    
+    @media only screen and (min-width: 540px) {
+      padding-top: 40px;
+  }
+}
+
+#modal article .logo img {
+    width: 96px;
+    height: 18px;
 }
 
 #step_bar_0,

@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <section id="modal" class="step_1">
         <article>
             <div class="column img">
@@ -53,10 +54,15 @@
                 <fieldset class="games">
                     <ul id="step_1_controls" class="disable-scrollbars"></ul>
                 </fieldset>
-                <button class="btn_step_1">Next step</button>
+                <div class="checkbox_error">
+                    <img class="info_error" src="img/info.png">
+                    Choose at least<br>one game
+                </div>
+                <button class="btn_step_1 primary_btn">Next step</button>
             </div>
         </article>
     </section>
+
     <section id="modal" class="step_2">
         <article>
             <div class="column img">
@@ -97,11 +103,16 @@
                     <fieldset class="areas">
                         <ul id="step_2_controls"></ul>
                     </fieldset>
+                    <div class="checkbox_error2">
+                        <img class="info_error" src="img/info.png">
+                        Choose at least<br>one game
+                    </div>
                 </div>
-                <button class="btn_step_2">Next step</button>
+                <button class="btn_step_2 primary_btn">Next step</button>
             </div>
         </article>
     </section>
+
     <section id="modal" class="step_3">
         <article>
             <div class="column img">
@@ -163,16 +174,17 @@
                             <input type="password" name="password" id="password"
                                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}" placeholder="Enter your password"
                                 required>
-                            <p>Password must contain at least one number, one uppercase and lowercase letter, and min. 4
+                            <p>Password must contain at least one number, one uppercase and lowercase letter, and
+                                minimun 4
                                 characters</p>
                         </div>
-                        <!--Must contain at least one number, one uppercase and lowercase letter and min. 4 characters-->
                     </fieldset>
                 </div>
-                <input type="submit" class="submit_btn" value="Create account">
+                <input type="submit" class="submit_btn primary_btn" value="Create account">
             </div>
         </article>
     </section>
+
     <section id="modal" class="step_4">
         <article>
             <div class="column img">
@@ -191,8 +203,8 @@
                         <img src="img/logo.png" alt="">
                     </div>
                     <div class="form_text">
-                        <h3>Start your journey today</h3>
-                        <h2>Join the community of todays gamers</h2>
+                        <h3>It's time to get in the zone</h3>
+                        <h2>All done!</h2>
                     </div>
                     <div class="tag">
                         <h3></h3>
@@ -208,28 +220,30 @@
             <div class="column form">
                 <div id="close_modal">x</div>
                 <div class="column_content">
-                    <h2>Thank you page</h2>
-                    <p>It's free! Please enter your information and fill out your interests on the next two steps.</p>
+                    <h2>Thank you!</h2>
+                    <h3>You are now signed up</h3>
+                    <p>Welcome to the community of the next generation of Esport Athletes. We are excited to
+                        be bringing you the latest news, and share tips and tricks for improving your performance.
+                        <br><br>You can
+                        always change your preferences by
+                        logging into your account.
+                    </p>
 
                 </div>
-                <input type="submit" class="submit_btn" value="Create account">
+                <div class="step_4_buttons">
+                    <button class="btn_step_4 secondary_btn">Close</button>
+                    <button class="btn_step_4 primary_btn">Sign in</button>
+                </div>
             </div>
         </article>
     </section>
 
-    <template id="games_boxes">
+    <template id="checkbox_games">
         <li>
             <input class="checkbox" id="" type="checkbox" name="game" value="" required />
             <label for=""></label>
         </li>
     </template>
-
-    <!-- <template id="checkbox_types">
-        <li>
-            <input class="checkbox" id="" type="checkbox" name="type" value="" required />
-            <label for=""></label>
-        </li>
-    </template> -->
 
     <template id="checkbox_areas">
         <li>
@@ -238,7 +252,6 @@
         </li>
     </template>
 
-    <!-- SVG ICONS -->
     <svg style="display: none;">
         <symbol id="pills-2" viewBox="0 0 251 251">
             <title>Ezone Pills 2</title>
@@ -249,6 +262,7 @@
     </svg>
 
     <script type="module" src="./main.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,9 @@
+@keyframes shake {
+    25% {
+        transform: translateX(-6px);
+    }
+    75% {
+        transform: translateX(6px);
+    }
+}
+
