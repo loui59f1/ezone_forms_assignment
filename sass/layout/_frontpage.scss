@@ -340,7 +340,11 @@ fieldset {
 #modal article .logo {
     position: relative;
     text-align: center;
-    margin-top: 40px;
+    padding-top: 40px;
+    
+    @media only screen and (min-width: 540px) {
+      padding-top: 40px;
+  }
 }
 
 #modal article .logo img {
@@ -356,8 +360,52 @@ fieldset {
   margin-left: 250px;
 }
 
-.btn_step_1,
-.btn_step_2,
+.btn_step_1 {
+  width: 40%;
+  padding: 12px 15px;
+  border-radius: 7px;
+  border: none;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0px;
+  right: 30px;
+  bottom: -40px;
+  background-color: #6259FA;
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+  cursor: pointer;
+  position: absolute;
+
+  @media only screen and (min-width: 540px) {
+    bottom: 40px;
+    right: 45px;
+  }
+}
+
+.btn_step_2 {
+  width: 40%;
+  padding: 12px 15px;
+  border-radius: 7px;
+  border: none;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0px;
+  background-color: #6259FA;
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  bottom: -175px;
+
+  @media only screen and (min-width: 540px) {
+    bottom: 40px;
+    right: 45px;
+  }
+}
+
 .btn_step_3 {
   width: 40%;
   padding: 12px 15px;
@@ -367,20 +415,27 @@ fieldset {
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-top: 0px;
-  right: 45px;
-  bottom: 40px;
   background-color: #6259FA;
   color: #fff;
   font-family: 'Jost', sans-serif;
   cursor: pointer;
   position: absolute;
+  right: 30px;
+  bottom: -105px;
+
+  @media only screen and (min-width: 540px) {
+    bottom: 40px;
+    right: 45px;
+  }
 }
+
+
 
 /* Step 0 */
 
 .step_1 .form {
-  padding: 50px;
-  padding-right: 5px;
+  padding: 30px;
+  padding-right: 0px;
   grid-gap: 5em;
 
   h2 {
@@ -391,12 +446,17 @@ fieldset {
   p {
     margin-left: 0;
     margin-bottom: 40px;
+  }
+
+  @media only screen and (min-width: 540px) {
+    padding: 50px;
+    padding-right: 5px;
   }
 }
 
 .step_2 .form {
-  padding: 50px;
-  padding-right: 5px;
+  padding: 30px;
+  padding-right: 25px;
   grid-gap: 5em;
 
   li {
@@ -411,12 +471,17 @@ fieldset {
   p {
     margin-left: 0;
     margin-bottom: 40px;
+  }
+
+  @media only screen and (min-width: 540px) {
+    padding: 50px;
+    padding-right: 5px;
   }
 }
 
 .step_3 .form {
-  padding: 50px;
-  padding-right: 5px;
+  padding: 30px;
+  padding-right: 20px;
   grid-gap: 5em;
 
   li {
@@ -432,9 +497,15 @@ fieldset {
     margin-left: 0;
     margin-bottom: 40px;
   }
+
+  @media only screen and (min-width: 540px) {
+    padding: 50px;
+    padding-right: 5px;
+  }
 }
 
 .step_4 .form {
+  padding: 30px;
 
   input {
     margin-bottom: 5px;
@@ -455,27 +526,40 @@ fieldset {
     margin-left: 5px;
     font-size: 0.85em;
   }
+
+  @media only screen and (min-width: 540px) {
+    padding: 50px;
+  }
 }
 
 .step_1 fieldset ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
+  margin-right: -10px;
+
+  @media only screen and (min-width: 540px) {
+    margin-right: 0;
+  }
 }
 
 .step_1 .disable-scrollbars {
 scrollbar-width: none; /* Firefox */
 -ms-overflow-style: none;  /* IE 10+ */
-&::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* Chrome/Safari/Webkit */
-}
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
 }
 
 #step_1_controls {
-max-height: 390px;
-overflow-y: scroll;
-position: relative;
+  max-height: 470px;
+  overflow-y: scroll;
+  position: relative;
+
+  @media only screen and (min-width: 540px) {
+    max-height: 390px;
+  }
 }
 
 .step_1 fieldset {
@@ -505,8 +589,12 @@ position: relative;
   position: absolute;
   cursor: pointer;
   background: url('../../img/card_check_before.png') no-repeat;
-  background-position: 9em 0;
+  background-position: 5em 0;
   background-size: 25px;
+
+  @media only screen and (min-width: 540px) {
+    background-position: 9em 0;
+  }
 }
 
 .step_1 label {
@@ -530,8 +618,12 @@ position: relative;
   position: absolute;
   cursor: pointer;
   background: url('../../img/card_check.png') no-repeat;
-  background-position: 9em 0;
+  background-position: 5em 0;
   background-size: 25px;
+
+  @media only screen and (min-width: 540px) {
+    background-position: 9em 0;
+  }
 }
 
 .step_1 input[type="checkbox"]:checked + label {
