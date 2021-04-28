@@ -15,18 +15,114 @@ input:is([type="text"], [type="password"], [type="email"]) {
   /* styling error */
   .name_error {
     visibility: hidden;
+    padding: 10px;
+    position: absolute;
+    z-index: 600;
+    right: 25px;
+    top: 45px;
+    background-color: #fff;
+    border: 1px solid #3E14D6;
+    border-radius: 7px;
+    font-family: 'Jost';
+    font-size: 0.9em;
+  }
+
+  .name_error::before {
+    content: '';
+    position: absolute;
+    right: 25px;
+    bottom: 89%;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-top: 1px solid #3E14D6;
+    border-right: 1px solid #3E14D6;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
   }
 
   .gamertag_error {
     visibility: hidden;
+    padding: 10px;
+    position: absolute;
+    z-index: 600;
+    right: 25px;
+    top: 45px;
+    background-color: #fff;
+    border: 1px solid #3E14D6;
+    border-radius: 7px;
+    font-family: 'Jost';
+    font-size: 0.9em;
+  }
+
+  .gamertag_error::before {
+    content: '';
+    position: absolute;
+    right: 25px;
+    bottom: 89%;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-top: 1px solid #3E14D6;
+    border-right: 1px solid #3E14D6;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
   }
 
   .email_error {
     visibility: hidden;
+    padding: 10px;
+    position: absolute;
+    z-index: 600;
+    right: 25px;
+    top: 45px;
+    background-color: #fff;
+    border: 1px solid #3E14D6;
+    border-radius: 7px;
+    font-family: 'Jost';
+    font-size: 0.9em;
+  }
+
+  .email_error::before {
+    content: '';
+    position: absolute;
+    right: 25px;
+    bottom: 89%;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-top: 1px solid #3E14D6;
+    border-right: 1px solid #3E14D6;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
   }
 
   .password_error {
     visibility: hidden;
+    padding: 10px;
+    position: absolute;
+    z-index: 600;
+    right: 25px;
+    top: 45px;
+    background-color: #fff;
+    border: 1px solid #3E14D6;
+    border-radius: 7px;
+    font-family: 'Jost';
+    font-size: 0.9em;
+  }
+
+  .password_error::before {
+    content: '';
+    position: absolute;
+    right: 25px;
+    bottom: 89%;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-top: 1px solid #3E14D6;
+    border-right: 1px solid #3E14D6;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
   }
   
   input:is([type="text"], [type="password"], [type="email"]):invalid:not(:placeholder-shown, :focus) {
@@ -59,6 +155,10 @@ input:is([type="text"], [type="password"], [type="email"]) {
       color: #5BE080;;
     }
   }
+
+  input:is([type="text"], [type="password"], [type="email"]):valid:not(:placeholder-shown, :focus) ~ label {
+    color: #5BE080;
+  }
   
   @keyframes shake {
     25% {
@@ -78,13 +178,6 @@ input:is([type="text"], [type="password"], [type="email"]) {
 
 /* Louise edited */
 .form-group label {
-    /* display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding-block: 0.5rem;
-    padding-inline: 0.4rem 0.7rem;
-    margin-inline-start: -0.4rem;
-    border-radius: 10px; */
     color: #2E326B;
     font-family: 'Jost', sans-serif;
     text-transform: uppercase;
@@ -98,7 +191,7 @@ input:is([type="text"], [type="password"], [type="email"]) {
     background-color: #fff;
     z-index: 100;
     position: absolute;
-    top: 10px;
+    top: -10px;
   }
 
   input:is([type="text"], [type="password"], [type="email"]) {
@@ -137,21 +230,6 @@ input:is([type="text"], [type="password"], [type="email"]) {
   /* Style label focus - virker ikke */
   label[for]:focus {
     color: #3E14D6 !important;
-}
-
-input[type="submit"] {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 7px;
-    border: none;
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-top: 20px;
-    background-color: #6259FA;
-    color: #fff;
-    font-family: 'Jost', sans-serif;
-    cursor: pointer;
 }
 
 input[name="name"] {
@@ -337,6 +415,10 @@ fieldset li {
     border-radius: 0 17px 17px 0;
 }
 
+.step_4 .form input {
+  margin-bottom: 25px !important;
+}
+
 fieldset {
   padding: 0 !important;
 }
@@ -378,13 +460,34 @@ fieldset {
   position: absolute;
   z-index: 200;
   margin-left: 250px;
+  margin-top: -9px;
+}
+
+.pills_2 {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  z-index: 200;
+  margin-left: 380px;
+  margin-top: 85px;
+  transform: rotate(0deg);
+}
+
+.pills_3 {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  z-index: 200;
+  margin-left: 280px;
+  margin-top: -110px;
+  transform: rotate(90deg);
+  opacity: 0.3;
 }
 
 .btn_step_1 {
   width: 40%;
   padding: 12px 15px;
   border-radius: 19px;
-  border: none;
   font-size: 0.9em;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -394,32 +497,10 @@ fieldset {
   background-color: transparent;
   border: 2px solid #6259FA;
   color: #6259FA;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Uniform 4', sans-serif;
+  font-weight: 400;
   cursor: pointer;
   position: absolute;
-
-  @media only screen and (min-width: 540px) {
-    bottom: 40px;
-    right: 45px;
-  }
-}
-
-.btn_step_2 {
-  width: 40%;
-  padding: 12px 15px;
-  border-radius: 7px;
-  border: none;
-  font-size: 0.9em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 0px;
-  background-color: #6259FA;
-  color: #fff;
-  font-family: 'Jost', sans-serif;
-  cursor: pointer;
-  position: absolute;
-  right: 30px;
-  bottom: -175px;
 
   @media only screen and (min-width: 540px) {
     bottom: 40px;
@@ -430,15 +511,16 @@ fieldset {
 .btn_step_3 {
   width: 40%;
   padding: 12px 15px;
-  border-radius: 7px;
-  border: none;
+  border-radius: 19px;
   font-size: 0.9em;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-top: 0px;
-  background-color: #6259FA;
-  color: #fff;
-  font-family: 'Jost', sans-serif;
+  background-color: transparent;
+  border: 2px solid #6259FA;
+  color: #6259FA;
+  font-family: 'Uniform 4', sans-serif;
+  font-weight: 400;
   cursor: pointer;
   position: absolute;
   right: 30px;
@@ -450,6 +532,30 @@ fieldset {
   }
 }
 
+input[type="submit"] {
+  width: 40%;
+  padding: 12px 15px;
+  border-radius: 19px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  background-color: transparent;
+  border: 2px solid #6259FA;
+  color: #6259FA;
+  font-family: 'Uniform 4', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  position: absolute;
+  right: 45px;
+  bottom: 15px;
+}
+
+input[type="submit"]:hover {
+  background-color: #6259FA;
+  color: #fff;
+  border-color: transparent;
+}
 
 
 /* Step 0 */
@@ -517,7 +623,7 @@ fieldset {
 
 .fade_pills {
   animation: fadeslidein;
-  animation-duration: 1.6s;
+  animation-duration: 2s;
   transition-timing-function: cubic-bezier(.17,.67,.93,.65);
   animation-fill-mode: forwards;
 }
@@ -528,6 +634,38 @@ fieldset {
     transform: translateY(-20px);
   } to {
     opacity: 1;
+    transform: translateY(-5px);
+  }
+}
+
+.fade_pills_remove {
+  animation: fadeslideout;
+  animation-duration: 2s;
+  transition-timing-function: cubic-bezier(.17,.67,.93,.65);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeslideout {
+  from {
+    transform: translateY(0px);
+  } to {
+    transform: translateX(25px);
+    transform: translateY(-39px);
+  }
+}
+
+.fade_pills_2 {
+  animation: fadeslidein2;
+  animation-duration: 2s;
+  transition-timing-function: cubic-bezier(.17,.67,.93,.65);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeslidein2 {
+  from {
+    transform: translateY(-39px);
+  } to {
+    transform: translateX(25px);
     transform: translateY(-5px);
   }
 }
@@ -633,12 +771,13 @@ fieldset {
 
   p {
     margin-left: 0;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
   }
 
   fieldset p {
     margin-bottom: 20px;
     margin-left: 5px;
+    margin-top: -10px;
     font-size: 0.85em;
   }
 

@@ -12,6 +12,8 @@ function init() {
 function showModal() {
     document.querySelector("#modal.step_1").style.display = "block";
     document.querySelector("#step_bar_1").classList.add("load_step_1");
+    document.querySelector(".step_1 .pills").classList.add("fade_pills");
+    document.querySelector(".step_1 .pills_2").classList.add("fade_pills");
 
     document.querySelector(".btn_step_1").addEventListener("click", () => checkGameCheckboxes("game", step3Modal));
 }
@@ -27,37 +29,13 @@ function checkGameCheckboxes(name, callback) {
     }
 }
 
-
-// function step2Modal() {
-//     document.querySelector("#modal.step_1").style.display = "none";
-//     document.querySelector("#modal.step_2").style.display = "block";
-//     document.querySelector("#step_bar_2").classList.add("load_step_2");
-//     document.querySelector(".step_2 .column_content").classList.add("slidein");
-//     document.querySelector(".step_2 .pills").classList.add("fade_pills");
-
-//     // Indholdet af step 2 slide ind fra højre  
-
-//     document.querySelector(".btn_step_2").addEventListener("click", () => checkTypeCheckboxes("type", step3Modal));
-// }
-
-// function checkTypeCheckboxes(type, callback) {
-//     const selected = document.querySelectorAll(`[name=${type}]:checked`);
-//     console.log(selected);
-
-//     if (selected.length > 0) {
-//         callback();
-//     } else {
-//         alert("Choose at least one type of gameplay")
-//     }
-// }
-
-
 function step3Modal() {
     document.querySelector("#modal.step_1").style.display = "none";
     document.querySelector("#modal.step_3").style.display = "block";
     document.querySelector("#step_bar_3").classList.add("load_step_2");
     document.querySelector(".step_3 .column_content").classList.add("slidein");
-    document.querySelector(".step_3 .pills").classList.add("fade_pills");
+    document.querySelector(".step_3 .pills").classList.add("fade_pills_remove");
+    document.querySelector(".step_3 .pills_2").classList.add("fade_pills_remove");
 
     document.querySelector(".btn_step_3").addEventListener("click", () => checkAreaCheckboxes("area", step4Modal));
 }
@@ -78,7 +56,8 @@ function step4Modal() {
     document.querySelector("#modal.step_4").style.display = "block";
     document.querySelector("#step_bar_4").classList.add("load_step_3");
     document.querySelector(".step_4 .column_content").classList.add("slidein");
-    document.querySelector(".step_4 .pills").classList.add("fade_pills");
+    document.querySelector(".step_4 .pills").classList.add("fade_pills_2");
+    document.querySelector(".step_4 .pills_2").classList.add("fade_pills_2");
 
     document.querySelector(".submit_btn").addEventListener("click", checkNameValid);
 }
